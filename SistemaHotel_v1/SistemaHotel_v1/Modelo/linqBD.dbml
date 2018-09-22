@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="C:\USERS\GABRIELA ASTUDILLO\DOCUMENTS\VISUAL STUDIO 2017\PROJECTS\SISTEMAHOTEL_V1\SISTEMAHOTEL_V1\MODELO\BDSISTEMAHOTEL.MDF" Class="linqBDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=&quot;C:\USERS\GABRIELA ASTUDILLO\DOCUMENTS\VISUAL STUDIO 2017\PROJECTS\SISTEMAHOTEL_V1\SISTEMAHOTEL_V1\MODELO\BDSISTEMAHOTEL.MDF&quot;;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="SistemaHotel_v1.Properties.Settings" SettingsPropertyName="C__USERS_GABRIELA_ASTUDILLO_DOCUMENTS_VISUAL_STUDIO_2017_PROJECTS_SISTEMAHOTEL_V1_SISTEMAHOTEL_V1_MODELO_BDSISTEMAHOTEL_" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ANULACION" Member="ANULACION">
+    <Type Name="ANULACION">
+      <Column Name="id_anu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="id_fac" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="FACTURA_ANULACION" Member="FACTURA" ThisKey="id_fac" OtherKey="id_fac" Type="FACTURA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DESCUENTO" Member="DESCUENTO">
+    <Type Name="DESCUENTO">
+      <Column Name="id_descuento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="porcentaje" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="DESCUENTO_FACTURA" Member="FACTURA" ThisKey="id_descuento" OtherKey="id_descuento" Type="FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DETALLE" Member="DETALLE">
+    <Type Name="DETALLE">
+      <Column Name="id_detalle" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_factura" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="id_producto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="precio_uni" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="precio_total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="HAB_CHECK_IN_DETALLE" Member="HAB_CHECK_IN" ThisKey="id_producto" OtherKey="id_hab_check_in" Type="HAB_CHECK_IN" IsForeignKey="true" />
+      <Association Name="EXTRAS_DETALLE" Member="EXTRAS" ThisKey="id_producto" OtherKey="id_extra" Type="EXTRAS" IsForeignKey="true" />
+      <Association Name="FACTURA_DETALLE" Member="FACTURA" ThisKey="id_factura" OtherKey="id_fac" Type="FACTURA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HAB_CHECK_IN" Member="HAB_CHECK_IN">
+    <Type Name="HAB_CHECK_IN">
+      <Column Name="id_hab_check_in" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_check_in" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_hab" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="HAB_CHECK_IN_DETALLE" Member="DETALLE" ThisKey="id_hab_check_in" OtherKey="id_producto" Type="DETALLE" />
+      <Association Name="CHECK_IN_HAB_CHECK_IN" Member="CHECK_IN" ThisKey="id_check_in" OtherKey="id_check_in" Type="CHECK_IN" IsForeignKey="true" />
+      <Association Name="HABITACIONES_HAB_CHECK_IN" Member="HABITACIONES" ThisKey="id_hab" OtherKey="num_hab" Type="HABITACIONES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EXTRAS" Member="EXTRAS">
+    <Type Name="EXTRAS">
+      <Column Name="id_extra" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_serv_o_prod" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="concepto_extra" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cantidad_extra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="precio_extra" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="total_extra" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EXTRAS_DETALLE" Member="DETALLE" ThisKey="id_extra" OtherKey="id_producto" Type="DETALLE" />
+      <Association Name="SERV_PROD_EXTRAS" Member="SERV_PROD" ThisKey="id_serv_o_prod" OtherKey="id_prod" Type="SERV_PROD" IsForeignKey="true" />
+      <Association Name="CLIENTE_EXTRAS" Member="CLIENTE" ThisKey="id_cliente" OtherKey="id_cliente" Type="CLIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACTURA" Member="FACTURA">
+    <Type Name="FACTURA">
+      <Column Name="id_fac" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="subtotal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="iva" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_descuento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descuento" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FACTURA_ANULACION" Member="ANULACION" ThisKey="id_fac" OtherKey="id_fac" Type="ANULACION" />
+      <Association Name="FACTURA_DETALLE" Member="DETALLE" ThisKey="id_fac" OtherKey="id_factura" Type="DETALLE" />
+      <Association Name="DESCUENTO_FACTURA" Member="DESCUENTO1" ThisKey="id_descuento" OtherKey="id_descuento" Type="DESCUENTO" IsForeignKey="true" />
+      <Association Name="CLIENTE_FACTURA" Member="CLIENTE" ThisKey="id_cliente" OtherKey="id_cliente" Type="CLIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SERV_PROD" Member="SERV_PROD">
+    <Type Name="SERV_PROD">
+      <Column Name="id_prod" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre_prod" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="precio_prod" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="stock_prod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="SERV_PROD_EXTRAS" Member="EXTRAS" ThisKey="id_prod" OtherKey="id_serv_o_prod" Type="EXTRAS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHECK_IN" Member="CHECK_IN">
+    <Type Name="CHECK_IN">
+      <Column Name="id_check_in" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_entrada" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_salida" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="num_adultos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="num_niños" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anticipo" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="reserva_o_check_in" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CHECK_IN_HAB_CHECK_IN" Member="HAB_CHECK_IN" ThisKey="id_check_in" OtherKey="id_check_in" Type="HAB_CHECK_IN" />
+      <Association Name="CHECK_IN_CHECKIN_VEH" Member="CHECKIN_VEH" ThisKey="id_check_in" OtherKey="id_check_in" Type="CHECKIN_VEH" />
+      <Association Name="CLIENTE_CHECK_IN" Member="CLIENTE" ThisKey="id_cliente" OtherKey="id_cliente" Type="CLIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VEHICULO" Member="VEHICULO">
+    <Type Name="VEHICULO">
+      <Column Name="id_veh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="placa_veh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="marca_veh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="color_veh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tamaño_veh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="VEHICULO_CHECKIN_VEH" Member="CHECKIN_VEH" ThisKey="id_veh" OtherKey="id_veh" Type="CHECKIN_VEH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UBI_CHECKIN_VEH" Member="UBI_CHECKIN_VEH">
+    <Type Name="UBI_CHECKIN_VEH">
+      <Column Name="id_ubi_checkin_veh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_ubi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_reg_veh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CHECKIN_VEH_UBI_CHECKIN_VEH" Member="CHECKIN_VEH" ThisKey="id_reg_veh" OtherKey="id_checkin_veh" Type="CHECKIN_VEH" IsForeignKey="true" />
+      <Association Name="UBICACION_UBI_CHECKIN_VEH" Member="UBICACION" ThisKey="id_ubi" OtherKey="id_ubi" Type="UBICACION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHECKIN_VEH" Member="CHECKIN_VEH">
+    <Type Name="CHECKIN_VEH">
+      <Column Name="id_checkin_veh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_check_in" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_veh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CHECKIN_VEH_UBI_CHECKIN_VEH" Member="UBI_CHECKIN_VEH" ThisKey="id_checkin_veh" OtherKey="id_reg_veh" Type="UBI_CHECKIN_VEH" />
+      <Association Name="CHECK_IN_CHECKIN_VEH" Member="CHECK_IN" ThisKey="id_check_in" OtherKey="id_check_in" Type="CHECK_IN" IsForeignKey="true" />
+      <Association Name="VEHICULO_CHECKIN_VEH" Member="VEHICULO" ThisKey="id_veh" OtherKey="id_veh" Type="VEHICULO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERSONA" Member="PERSONA">
+    <Type Name="PERSONA">
+      <Column Name="id_persona" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tipo_documento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="num_documento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_nacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="genero" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nacionalidad" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="estado_civil" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PERSONA_EMPLEADO" Member="EMPLEADO" ThisKey="id_persona" OtherKey="id_empleado" Type="EMPLEADO" Cardinality="One" />
+      <Association Name="PERSONA_CLIENTE" Member="CLIENTE" ThisKey="id_persona" OtherKey="id_cliente" Type="CLIENTE" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPLEADO" Member="EMPLEADO">
+    <Type Name="EMPLEADO">
+      <Column Name="id_empleado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cargo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hora_entrada" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="hora_salida" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="sueldo" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="EMPLEADO_USUARIO" Member="USUARIO" ThisKey="id_empleado" OtherKey="id_usuario" Type="USUARIO" Cardinality="One" />
+      <Association Name="PERSONA_EMPLEADO" Member="PERSONA" ThisKey="id_empleado" OtherKey="id_persona" Type="PERSONA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIO" Member="USUARIO">
+    <Type Name="USUARIO">
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="EMPLEADO_USUARIO" Member="EMPLEADO" ThisKey="id_usuario" OtherKey="id_empleado" Type="EMPLEADO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTE" Member="CLIENTE">
+    <Type Name="CLIENTE">
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="categoria" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTE_EXTRAS" Member="EXTRAS" ThisKey="id_cliente" OtherKey="id_cliente" Type="EXTRAS" />
+      <Association Name="CLIENTE_FACTURA" Member="FACTURA" ThisKey="id_cliente" OtherKey="id_cliente" Type="FACTURA" />
+      <Association Name="CLIENTE_CHECK_IN" Member="CHECK_IN" ThisKey="id_cliente" OtherKey="id_cliente" Type="CHECK_IN" />
+      <Association Name="PERSONA_CLIENTE" Member="PERSONA" ThisKey="id_cliente" OtherKey="id_persona" Type="PERSONA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPO_HAB" Member="TIPO_HAB">
+    <Type Name="TIPO_HAB">
+      <Column Name="id_tipo_hab" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="TIPO_HAB_HABITACIONES" Member="HABITACIONES" ThisKey="id_tipo_hab" OtherKey="id_tipo" Type="HABITACIONES" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HABITACIONES" Member="HABITACIONES">
+    <Type Name="HABITACIONES">
+      <Column Name="piso" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="num_hab" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="HABITACIONES_HAB_CHECK_IN" Member="HAB_CHECK_IN" ThisKey="num_hab" OtherKey="id_hab" Type="HAB_CHECK_IN" />
+      <Association Name="TIPO_HAB_HABITACIONES" Member="TIPO_HAB" ThisKey="id_tipo" OtherKey="id_tipo_hab" Type="TIPO_HAB" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UBICACION" Member="UBICACION">
+    <Type Name="UBICACION">
+      <Column Name="id_ubi" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="UBICACION_UBI_CHECKIN_VEH" Member="UBI_CHECKIN_VEH" ThisKey="id_ubi" OtherKey="id_ubi" Type="UBI_CHECKIN_VEH" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.625, 12.375" name="linqBD">
+  <DataContextMoniker Name="/linqBDDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1b556e89-eb45-445e-a61b-6b53f4d20d14" absoluteBounds="5.5, 1.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/linqBDDataContext/ANULACION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4069e900-5d0a-4c79-aff3-8f95746d24c5" absoluteBounds="5.5150000000000006, 2.3350000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="167e800d-332c-4499-ac0c-da1aa48b4459" absoluteBounds="5.5, 3.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/linqBDDataContext/DESCUENTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3dcc9fd-458e-44a0-900e-8cba9c7687ec" absoluteBounds="5.5150000000000006, 3.9600000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65dfcf49-8593-45d2-8736-7c67d0319118" absoluteBounds="10.875, 1.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqBDDataContext/DETALLE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b3373b1-c12a-458f-bae9-19dba9d1b568" absoluteBounds="10.89, 2.2100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c085f823-e7cc-445c-b09d-59d70341b064" absoluteBounds="13.375, 8.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqBDDataContext/HAB_CHECK_IN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8a76d4e-bc5f-4fb5-a9f5-1f4a071265e1" absoluteBounds="13.39, 9.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.2829610147768 : 8.625); (14.2829610147768 : 2.59729879036013); (12.875 : 2.59729879036013)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/HAB_CHECK_IN/HAB_CHECK_IN_DETALLE" />
+      <nodes>
+        <classShapeMoniker Id="c085f823-e7cc-445c-b09d-59d70341b064" />
+        <classShapeMoniker Id="65dfcf49-8593-45d2-8736-7c67d0319118" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2122d8d1-3032-4c45-9971-e64235fc2313" absoluteBounds="10.875, 4.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/linqBDDataContext/EXTRAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84173e06-d69f-4e23-9045-3257c3f476d0" absoluteBounds="10.89, 4.7100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.875 : 4.25); (11.875 : 3.7131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/EXTRAS/EXTRAS_DETALLE" />
+      <nodes>
+        <classShapeMoniker Id="2122d8d1-3032-4c45-9971-e64235fc2313" />
+        <classShapeMoniker Id="65dfcf49-8593-45d2-8736-7c67d0319118" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5afeb5d3-8177-4257-af40-ec6021dd3117" absoluteBounds="8.25, 1.875, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/linqBDDataContext/FACTURA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10e527b2-7a73-4422-963a-0bcb4aa869f6" absoluteBounds="8.265, 2.3350000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 2.56814697265625); (7.5 : 2.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/FACTURA/FACTURA_ANULACION" />
+      <nodes>
+        <classShapeMoniker Id="5afeb5d3-8177-4257-af40-ec6021dd3117" />
+        <classShapeMoniker Id="1b556e89-eb45-445e-a61b-6b53f4d20d14" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 2.70994662780744); (10.875 : 2.7113940937312)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/FACTURA/FACTURA_DETALLE" />
+      <nodes>
+        <classShapeMoniker Id="5afeb5d3-8177-4257-af40-ec6021dd3117" />
+        <classShapeMoniker Id="65dfcf49-8593-45d2-8736-7c67d0319118" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 3.93354028353544); (7.875 : 3.93354028353544); (7.875 : 3.93879237028922); (8.25 : 3.93879237028922)]" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/DESCUENTO/DESCUENTO_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="167e800d-332c-4499-ac0c-da1aa48b4459" />
+        <classShapeMoniker Id="5afeb5d3-8177-4257-af40-ec6021dd3117" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bff5929b-7feb-43eb-9e43-2cc84d177570" absoluteBounds="10.875, 6.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqBDDataContext/SERV_PROD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="858ffd93-71ac-425c-ae14-75a89b0a4804" absoluteBounds="10.89, 7.3350000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.8312793265143 : 6.875); (11.8312793265143 : 6.40549967447917)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/SERV_PROD/SERV_PROD_EXTRAS" />
+      <nodes>
+        <classShapeMoniker Id="bff5929b-7feb-43eb-9e43-2cc84d177570" />
+        <classShapeMoniker Id="2122d8d1-3032-4c45-9971-e64235fc2313" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="efe3e5a7-3933-4ffa-ad33-7b47d1172f29" absoluteBounds="8.25, 7.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/linqBDDataContext/CHECK_IN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bea22519-8e0f-49d5-ac41-332c82bddd2e" absoluteBounds="8.265, 8.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.25 : 9.26707210434551); (10.625 : 9.26707210434551); (10.625 : 9.26944064822133); (13.375 : 9.26944064822133)]" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/CHECK_IN/CHECK_IN_HAB_CHECK_IN" />
+      <nodes>
+        <classShapeMoniker Id="efe3e5a7-3933-4ffa-ad33-7b47d1172f29" />
+        <classShapeMoniker Id="c085f823-e7cc-445c-b09d-59d70341b064" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a5d09ae4-91ce-401c-b18f-6e122176b5c2" absoluteBounds="2.75, 9.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqBDDataContext/VEHICULO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="404bf1ca-13bb-4302-a904-be068b9a6b2d" absoluteBounds="2.7650000000000006, 9.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="409addeb-6d07-4127-adaa-597e4d43d285" absoluteBounds="5.5, 10.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqBDDataContext/UBI_CHECKIN_VEH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81a66548-e31a-4b06-9f71-8eaf57b46dec" absoluteBounds="5.5150000000000006, 11.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d00e94b0-e1a7-47e6-8f63-c62c6db9e2fd" absoluteBounds="5.5, 8.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqBDDataContext/CHECKIN_VEH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cb554bd-3284-47de-94db-00da9be3fe1c" absoluteBounds="5.5150000000000006, 9.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5 : 10.2612939453125); (6.5 : 10.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/CHECKIN_VEH/CHECKIN_VEH_UBI_CHECKIN_VEH" />
+      <nodes>
+        <classShapeMoniker Id="d00e94b0-e1a7-47e6-8f63-c62c6db9e2fd" />
+        <classShapeMoniker Id="409addeb-6d07-4127-adaa-597e4d43d285" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.61744087666849); (8.058 : 9.61929215593314); (7.5 : 9.61929215593314)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/CHECK_IN/CHECK_IN_CHECKIN_VEH" />
+      <nodes>
+        <classShapeMoniker Id="efe3e5a7-3933-4ffa-ad33-7b47d1172f29" />
+        <classShapeMoniker Id="d00e94b0-e1a7-47e6-8f63-c62c6db9e2fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 9.81814697265625); (5.5 : 9.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/VEHICULO/VEHICULO_CHECKIN_VEH" />
+      <nodes>
+        <classShapeMoniker Id="a5d09ae4-91ce-401c-b18f-6e122176b5c2" />
+        <classShapeMoniker Id="d00e94b0-e1a7-47e6-8f63-c62c6db9e2fd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3ba15c28-8b38-446a-9707-83fb389d330e" absoluteBounds="5.5, 5.375, 2, 3.1170068359375">
+      <DataClassMoniker Name="/linqBDDataContext/PERSONA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4e8c81c-3299-454a-afde-dae0c6640989" absoluteBounds="5.5150000000000006, 5.8350000000000009, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e03cf58-f663-4750-b55b-a051d7181f0f" absoluteBounds="2.75, 5.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/linqBDDataContext/EMPLEADO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="255ebdc5-1c35-40cb-af7e-e285a0070bcf" absoluteBounds="2.7650000000000006, 5.9600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 6.24665993073734); (4.75 : 6.24665993073734)]" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/PERSONA/PERSONA_EMPLEADO" />
+      <nodes>
+        <classShapeMoniker Id="3ba15c28-8b38-446a-9707-83fb389d330e" />
+        <classShapeMoniker Id="1e03cf58-f663-4750-b55b-a051d7181f0f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="318f3461-b0a6-4728-94e4-3273eb0062dc" absoluteBounds="2.75, 7.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqBDDataContext/USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e448aac-8909-48fa-b380-a4d04dbc35f5" absoluteBounds="2.7650000000000006, 8.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 7.27089680989583); (3.75 : 7.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/EMPLEADO/EMPLEADO_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="1e03cf58-f663-4750-b55b-a051d7181f0f" />
+        <classShapeMoniker Id="318f3461-b0a6-4728-94e4-3273eb0062dc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b108a362-8c48-40a7-b3e3-dbaf3bea27f1" absoluteBounds="8.25, 5.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/linqBDDataContext/CLIENTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61938f36-8918-4391-a3cc-36a8cb94d67b" absoluteBounds="8.265, 5.8350000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.25 : 5.92414532939349); (10.55 : 5.92414532939349); (10.55 : 5.92759872616073); (10.875 : 5.92759872616073)]" fixedFrom="Caller" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/CLIENTE/CLIENTE_EXTRAS" />
+      <nodes>
+        <classShapeMoniker Id="b108a362-8c48-40a7-b3e3-dbaf3bea27f1" />
+        <classShapeMoniker Id="2122d8d1-3032-4c45-9971-e64235fc2313" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.27075990191723 : 5.375); (9.27075990191723 : 4.4151025390625)]" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/CLIENTE/CLIENTE_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="b108a362-8c48-40a7-b3e3-dbaf3bea27f1" />
+        <classShapeMoniker Id="5afeb5d3-8177-4257-af40-ec6021dd3117" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.17177033687828 : 6.56899251302083); (9.17177033687828 : 7.75)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/CLIENTE/CLIENTE_CHECK_IN" />
+      <nodes>
+        <classShapeMoniker Id="b108a362-8c48-40a7-b3e3-dbaf3bea27f1" />
+        <classShapeMoniker Id="efe3e5a7-3933-4ffa-ad33-7b47d1172f29" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 6.10065905101006); (8.25 : 6.10065905101006)]" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/linqBDDataContext/PERSONA/PERSONA_CLIENTE" />
+      <nodes>
+        <classShapeMoniker Id="3ba15c28-8b38-446a-9707-83fb389d330e" />
+        <classShapeMoniker Id="b108a362-8c48-40a7-b3e3-dbaf3bea27f1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1b58068c-824d-4070-b89b-44b72bd5fdf3" absoluteBounds="10.875, 10.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqBDDataContext/TIPO_HAB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef26beba-a97b-4b6b-9ace-1b14e23f9521" absoluteBounds="10.89, 11.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="123430bc-4f7a-4dec-94e5-619f4460cf8a" absoluteBounds="13.375, 10.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/linqBDDataContext/HABITACIONES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51181c79-1c86-4dbb-8f20-60f6a0ffceb0" absoluteBounds="13.39, 10.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.375 : 10.5); (14.375 : 10.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/HABITACIONES/HABITACIONES_HAB_CHECK_IN" />
+      <nodes>
+        <classShapeMoniker Id="123430bc-4f7a-4dec-94e5-619f4460cf8a" />
+        <classShapeMoniker Id="c085f823-e7cc-445c-b09d-59d70341b064" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.875 : 11.3181469726562); (13.375 : 11.3181469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/TIPO_HAB/TIPO_HAB_HABITACIONES" />
+      <nodes>
+        <classShapeMoniker Id="1b58068c-824d-4070-b89b-44b72bd5fdf3" />
+        <classShapeMoniker Id="123430bc-4f7a-4dec-94e5-619f4460cf8a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8c8ce92b-b691-4165-aaf2-66d19c8008ed" absoluteBounds="8.25, 10.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/linqBDDataContext/UBICACION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8e0e999-458a-4a5f-9e2d-9179eecf76c2" absoluteBounds="8.265, 11.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 11.3181469726562); (7.5 : 11.3181469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/linqBDDataContext/UBICACION/UBICACION_UBI_CHECKIN_VEH" />
+      <nodes>
+        <classShapeMoniker Id="8c8ce92b-b691-4165-aaf2-66d19c8008ed" />
+        <classShapeMoniker Id="409addeb-6d07-4127-adaa-597e4d43d285" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
