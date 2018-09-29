@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace SistemaHotel_v1.Vista
 {
@@ -14,9 +15,16 @@ namespace SistemaHotel_v1.Vista
     {
         public FrmPrincipal()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
+
+        //Código para poder mover la ventana presionando la barra de título con el botón izquierdo del mouse
+        /*
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hand, int wnsg, int wparam, int lparam);
+        */
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -54,8 +62,13 @@ namespace SistemaHotel_v1.Vista
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+        {            
+            if (MessageBox.Show("¿Seguro que desea cerrar la aplicación?", "Alerta!!!",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,46 +79,77 @@ namespace SistemaHotel_v1.Vista
 
         private void button15_Click(object sender, EventArgs e)
         {
-            panel10.Height = btnIni.Height;
-            panel10.Top = btnIni.Top;
+            MoverPanelDeBotones(btnIni);
+            Inicio ini = new Inicio();
+            AddControlsToPanel(ini);
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            panel10.Height = btnCheckIn.Height;
-            panel10.Top = btnCheckIn.Top;
+            MoverPanelDeBotones(btnCheckIn);
+            AbrirFormularioEnPanel(new FrmCheckIn());
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            panel10.Height = btnCheckOut.Height;
-            panel10.Top = btnCheckOut.Top;
+            MoverPanelDeBotones(btnCheckOut);
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            panel10.Height = btnReservas.Height;
-            panel10.Top = btnReservas.Top;
-        }
-
+       
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            panel10.Height = btnVentas.Height;
-            panel10.Top = btnVentas.Top;
+            MoverPanelDeBotones(btnVentas);
         }
 
         private void Clientes_Click(object sender, EventArgs e)
         {
             panel10.Height = btnClientes.Height;
-            panel10.Top = btnClientes.Top;
+            panel10.Top = btnClientes.Top;     
+            AbrirFormularioEnPanel(new FrmClientes());
         }
 
         private void btnAdministrar_Click(object sender, EventArgs e)
         {
-            panel10.Height = btnAdministrar.Height;
-            panel10.Top = btnAdministrar.Top;
+            MoverPanelDeBotones(btnFacturas);
+        }
+
+        private void MoverPanelDeBotones(Button b)
+        {
+            panel10.Height = b.Height;
+            panel10.Top = b.Top;
+        }
+
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Clear();
+            panelContenedor.Controls.Add(c);
+        }
+
+        private void AbrirFormularioEnPanel(object fhijo)
+        {
+            if (this.panelContenedor.Controls.Count>0)
+            {
+                this.panelContenedor.Controls.RemoveAt(0);
+            }
+            Form fh= fhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
         }
 
 
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            //ReleaseCapture();
+            //SendMessage(this.Handle, 0X112, 0x012, 0);
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new FrmEmpleados());
+        }
     }
 }

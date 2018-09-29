@@ -31,7 +31,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UsuarioInicioSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -60,30 +60,31 @@
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRestaurar = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.btnAdministrar = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
             this.btnIni = new System.Windows.Forms.Button();
             this.btnCheckIn = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.btnReservas = new System.Windows.Forms.Button();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -111,22 +112,22 @@
             // 
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem});
+            this.UsuarioInicioSesionToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(259, 28);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // nombreDelUsuarioQueInicióSesiónToolStripMenuItem
+            // UsuarioInicioSesionToolStripMenuItem
             // 
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UsuarioInicioSesionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cambiarContraseñaToolStripMenuItem,
             this.cerrarSesiónToolStripMenuItem});
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem.Name = "nombreDelUsuarioQueInicióSesiónToolStripMenuItem";
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
-            this.nombreDelUsuarioQueInicióSesiónToolStripMenuItem.Text = "   Nombre del usuario                        ";
+            this.UsuarioInicioSesionToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioInicioSesionToolStripMenuItem.Name = "UsuarioInicioSesionToolStripMenuItem";
+            this.UsuarioInicioSesionToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
+            this.UsuarioInicioSesionToolStripMenuItem.Text = "   Nombre del usuario                        ";
             // 
             // cambiarContraseñaToolStripMenuItem
             // 
@@ -181,37 +182,38 @@
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // facturasToolStripMenuItem
             // 
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.facturasToolStripMenuItem.Text = "Productos";
             // 
             // reservasToolStripMenuItem
             // 
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.reservasToolStripMenuItem.Text = "Servicios";
             // 
             // garageToolStripMenuItem
             // 
             this.garageToolStripMenuItem.Name = "garageToolStripMenuItem";
-            this.garageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.garageToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.garageToolStripMenuItem.Text = "Habitaciones";
             // 
             // garageToolStripMenuItem1
             // 
             this.garageToolStripMenuItem1.Name = "garageToolStripMenuItem1";
-            this.garageToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.garageToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
             this.garageToolStripMenuItem1.Text = "Garage";
             // 
             // reportesToolStripMenuItem
@@ -231,43 +233,43 @@
             // reservasToolStripMenuItem1
             // 
             this.reservasToolStripMenuItem1.Name = "reservasToolStripMenuItem1";
-            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.reservasToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.reservasToolStripMenuItem1.Text = "Reservas";
             // 
             // facturasToolStripMenuItem1
             // 
             this.facturasToolStripMenuItem1.Name = "facturasToolStripMenuItem1";
-            this.facturasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.facturasToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.facturasToolStripMenuItem1.Text = "Facturas";
             // 
             // checkInToolStripMenuItem
             // 
             this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
-            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.checkInToolStripMenuItem.Text = "Check in";
             // 
             // checkOutToolStripMenuItem
             // 
             this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.checkOutToolStripMenuItem.Text = "Check out";
             // 
             // extrasToolStripMenuItem
             // 
             this.extrasToolStripMenuItem.Name = "extrasToolStripMenuItem";
-            this.extrasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.extrasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.extrasToolStripMenuItem.Text = "Clientes";
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             // 
             // configuracionesToolStripMenuItem
@@ -339,47 +341,59 @@
             this.label19.TabIndex = 13;
             this.label19.Text = "Diamond Soft";
             // 
-            // button1
+            // pictureBox15
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.CausesValidation = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("bz-bpmn-font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1256, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 30);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "-";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox15.BackgroundImage = global::SistemaHotel_v1.Properties.Resources._5c147744801986d09e8fb6c67c405069_jpg;
+            this.pictureBox15.Image = global::SistemaHotel_v1.Properties.Resources._050_shape;
+            this.pictureBox15.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 12;
+            this.pictureBox15.TabStop = false;
             // 
-            // button2
+            // btnMinimizar
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.CausesValidation = false;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1312, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 30);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "x";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnMinimizar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnMinimizar.CausesValidation = false;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("bz-bpmn-font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.Location = new System.Drawing.Point(1200, 4);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(50, 30);
+            this.btnMinimizar.TabIndex = 26;
+            this.btnMinimizar.Text = "-";
+            this.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMinimizar.UseCompatibleTextRendering = true;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCerrar.CausesValidation = false;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(1312, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(50, 30);
+            this.btnCerrar.TabIndex = 27;
+            this.btnCerrar.Text = "x";
+            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCerrar.UseCompatibleTextRendering = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnRestaurar);
+            this.panel2.Controls.Add(this.btnCerrar);
+            this.panel2.Controls.Add(this.btnMinimizar);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -387,12 +401,29 @@
             this.panel2.Size = new System.Drawing.Size(1370, 40);
             this.panel2.TabIndex = 15;
             // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRestaurar.CausesValidation = false;
+            this.btnRestaurar.FlatAppearance.BorderSize = 0;
+            this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestaurar.Font = new System.Drawing.Font("Nasalization", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestaurar.ForeColor = System.Drawing.Color.White;
+            this.btnRestaurar.Location = new System.Drawing.Point(1256, 5);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(50, 30);
+            this.btnRestaurar.TabIndex = 28;
+            this.btnRestaurar.Text = "[]";
+            this.btnRestaurar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRestaurar.UseCompatibleTextRendering = true;
+            this.btnRestaurar.UseVisualStyleBackColor = false;
+            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel16.Controls.Add(this.panel10);
             this.panel16.Controls.Add(this.btnVentas);
-            this.panel16.Controls.Add(this.btnAdministrar);
+            this.panel16.Controls.Add(this.btnFacturas);
             this.panel16.Controls.Add(this.btnIni);
             this.panel16.Controls.Add(this.btnCheckIn);
             this.panel16.Controls.Add(this.btnCheckOut);
@@ -411,7 +442,7 @@
             this.panel10.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel10.Location = new System.Drawing.Point(0, 6);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(5, 80);
+            this.panel10.Size = new System.Drawing.Size(7, 80);
             this.panel10.TabIndex = 41;
             // 
             // btnVentas
@@ -433,23 +464,23 @@
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // btnAdministrar
+            // btnFacturas
             // 
-            this.btnAdministrar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAdministrar.FlatAppearance.BorderSize = 0;
-            this.btnAdministrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdministrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrar.ForeColor = System.Drawing.Color.White;
-            this.btnAdministrar.Image = global::SistemaHotel_v1.Properties.Resources.fac;
-            this.btnAdministrar.Location = new System.Drawing.Point(3, 492);
-            this.btnAdministrar.Name = "btnAdministrar";
-            this.btnAdministrar.Size = new System.Drawing.Size(80, 80);
-            this.btnAdministrar.TabIndex = 19;
-            this.btnAdministrar.Text = "Facturas";
-            this.btnAdministrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAdministrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAdministrar.UseVisualStyleBackColor = false;
-            this.btnAdministrar.Click += new System.EventHandler(this.btnAdministrar_Click);
+            this.btnFacturas.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnFacturas.FlatAppearance.BorderSize = 0;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturas.ForeColor = System.Drawing.Color.White;
+            this.btnFacturas.Image = global::SistemaHotel_v1.Properties.Resources.fac;
+            this.btnFacturas.Location = new System.Drawing.Point(3, 492);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Size = new System.Drawing.Size(80, 80);
+            this.btnFacturas.TabIndex = 19;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFacturas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnFacturas.UseVisualStyleBackColor = false;
+            this.btnFacturas.Click += new System.EventHandler(this.btnAdministrar_Click);
             // 
             // btnIni
             // 
@@ -561,26 +592,15 @@
             this.btnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReservas.UseCompatibleTextRendering = true;
             this.btnReservas.UseVisualStyleBackColor = false;
-            this.btnReservas.Click += new System.EventHandler(this.btnReportes_Click);
             // 
-            // pictureBox15
+            // panelContenedor
             // 
-            this.pictureBox15.BackgroundImage = global::SistemaHotel_v1.Properties.Resources._5c147744801986d09e8fb6c67c405069_jpg;
-            this.pictureBox15.Image = global::SistemaHotel_v1.Properties.Resources._050_shape;
-            this.pictureBox15.Location = new System.Drawing.Point(12, 5);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 12;
-            this.pictureBox15.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(85, 68);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1285, 681);
-            this.panel4.TabIndex = 40;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(85, 68);
+            this.panelContenedor.MaximumSize = new System.Drawing.Size(0, 700);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1285, 681);
+            this.panelContenedor.TabIndex = 41;
             // 
             // FrmPrincipal
             // 
@@ -588,11 +608,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(680, 0);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
@@ -608,9 +629,9 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -620,12 +641,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem nombreDelUsuarioQueInicióSesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UsuarioInicioSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.Panel panel8;
@@ -643,7 +664,7 @@
         private System.Windows.Forms.ToolStripMenuItem manualDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnAdministrar;
+        private System.Windows.Forms.Button btnFacturas;
         private System.Windows.Forms.Button btnIni;
         private System.Windows.Forms.Button btnCheckIn;
         private System.Windows.Forms.Button btnCheckOut;
@@ -662,6 +683,7 @@
         private System.Windows.Forms.ToolStripMenuItem garageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem garageToolStripMenuItem1;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnRestaurar;
+        private System.Windows.Forms.Panel panelContenedor;
     }
 }

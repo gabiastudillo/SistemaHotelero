@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaHotel_v1
+namespace SistemaHotel_v1.Vista
 {
-    public partial class FrmPrincipalAdmin : Form
+    public partial class FrmCheckIn : Form
     {
-        public FrmPrincipalAdmin()
+        public FrmCheckIn()
         {
             InitializeComponent();
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

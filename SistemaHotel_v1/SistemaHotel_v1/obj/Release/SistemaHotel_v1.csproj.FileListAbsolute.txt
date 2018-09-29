@@ -13,3 +13,19 @@ C:\Users\Gabriela Astudillo\Documents\Visual Studio 2017\Projects\SistemaHotel_v
 C:\Users\Gabriela Astudillo\Documents\Visual Studio 2017\Projects\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.FrmPrincipal.resources
 C:\Users\Gabriela Astudillo\documents\visual studio 2017\Projects\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.Empleados.resources
 C:\Users\Gabriela Astudillo\documents\visual studio 2017\Projects\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.Inicio.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\bin\Release\Modelo\bdSistemaHotel.mdf
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\bin\Release\Modelo\bdSistemaHotel_log.ldf
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\bin\Release\SistemaHotel_v1.exe.config
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\bin\Release\SistemaHotel_v1.exe
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\bin\Release\SistemaHotel_v1.pdb
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.csprojResolveAssemblyReference.cache
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Properties.Resources.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.FrmClientes.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.FrmPrincipal.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.Inicio.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.Login.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.csproj.GenerateResource.Cache
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.exe
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.pdb
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.FrmEmpleados.resources
+C:\Users\Gabriela Astudillo\Documents\GitHub\SistemaHotelero\SistemaHotel_v1\SistemaHotel_v1\obj\Release\SistemaHotel_v1.Vista.FrmCheckIn.resources

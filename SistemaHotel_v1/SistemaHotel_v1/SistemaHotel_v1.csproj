@@ -61,12 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmPrincipalAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPrincipalAdmin.Designer.cs">
-      <DependentUpon>FrmPrincipalAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modelo\linqBD.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,23 +68,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\FrmCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmCheckIn.Designer.cs">
+      <DependentUpon>FrmCheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Empleados.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Vista\Empleados.Designer.cs">
-      <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Inicio.cs">
       <SubType>UserControl</SubType>
@@ -104,9 +104,6 @@
     <Compile Include="Vista\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmPrincipalAdmin.resx">
-      <DependentUpon>FrmPrincipalAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,14 +114,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\FrmCheckIn.resx">
+      <DependentUpon>FrmCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Empleados.resx">
-      <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

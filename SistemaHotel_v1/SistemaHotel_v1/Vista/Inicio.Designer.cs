@@ -736,7 +736,6 @@
             this.Controls.Add(this.panel4);
             this.Name = "Inicio";
             this.Size = new System.Drawing.Size(1287, 677);
-            this.Load += new System.EventHandler(this.Inicio_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
